@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App1.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,10 @@ namespace App1
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page2());
+        }
+    }
 }

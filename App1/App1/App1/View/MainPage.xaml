@@ -3,9 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App1"
              x:Class="App1.MainPage">
-
-	<Label Text="Welcome to Xamarin.Forms! Great journey!!!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Hello World!"/>
+            <Label Text="A second line" FontSize="Large"/>
+            <Button Text="Go to Page 2" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>

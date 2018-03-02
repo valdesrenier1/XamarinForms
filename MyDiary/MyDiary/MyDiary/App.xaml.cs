@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
+using MyDiary.Views;
 using Xamarin.Forms;
 
-namespace App1
+namespace MyDiary
 {
 	public partial class App : Application
 	{
+
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new App1.MainPage());
-		}
+
+            MainPage = new MainPage();
+        }
 
 		protected override void OnStart ()
 		{
