@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.View.PagePerson">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding People}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Address}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView> 
+            <ListView ItemsSource="{Binding People}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell 
+                            Text="{Binding Name}"
+                            Detail="{Binding Address}"
+                            ImageSource="{Binding ImageSource}"
+                            TextColor="Black"
+                            DetailColor="Gray"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView ItemsSource="{Binding People}" HasUnevenRows="True" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView>
+                                <StackLayout Padding="20">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                            Text="{Binding FirstName}"
+                                            FontSize="20"
+                                            FontAttributes="Bold"/>
+                                        <Label 
+                                            Text="{Binding LastName}"
+                                            FontSize="20"
+                                            FontAttributes="Bold"/>
+                                    </StackLayout>
+                                    <Label 
+                                        Text="{Binding Address}"
+                                        FontSize="15"/>
+                                </StackLayout>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

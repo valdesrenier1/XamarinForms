@@ -24,5 +24,10 @@ namespace App1
         {
             Navigation.PushAsync(new Page2());
         }
+
+        private void ButtonList_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PagePerson());
+        }
     }
 }

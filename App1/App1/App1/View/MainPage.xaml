@@ -18,8 +18,20 @@
             <Label Text="Lower Left" Grid.Row="1" Grid.Column="0"/>
             <Label Text="Lower Right" Grid.Row="1" Grid.Column="1"/>
         </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Text="Page 2" Clicked="Button_Clicked" Grid.Row="0" Grid.ColumnSpan="2"/>
+            <Button Text="Page Person" Clicked="ButtonList_Clicked" Grid.Row="1" Grid.ColumnSpan="2"/>
+        </Grid>
         <Label Text="-----------------------"/>
-        <Button Text="Page 2" Clicked="Button_Clicked"/>
+    
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
