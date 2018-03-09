@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.ViewModel;
 
 namespace App1.View
 {
@@ -15,6 +15,7 @@ namespace App1.View
 		public Page2 ()
 		{
 			InitializeComponent ();
+            BindingContext = new Page2ViewModel();
 		}
 	}
 }
